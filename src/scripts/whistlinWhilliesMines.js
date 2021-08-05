@@ -15,7 +15,7 @@ document.addEventListener(
     }
 )
 
-export const whistlinWhilliesMines = () => {
+export const whistlingWhilliesMines = () => {
     const companyName= "Whistling Whillies Mines"
     return `
         <h1>${companyName}s! Where you get the gold, and we get the shaft.</h1>
