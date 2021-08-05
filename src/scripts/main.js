@@ -1,4 +1,4 @@
-import { WhistlingWhilliesMines } from "./WhistlingWhilliesMines.js"
+import { whistlingWhilliesMines } from "./WhistlingWhilliesMines.js"
 
 const mainContainer = document.querySelector("#container")
 
@@ -13,7 +13,7 @@ document.addEventListener(
 )
 
 export const renderHTML = () => {
-    mainContainer.innerHTML = WhistlingWhilliesMines()
+    mainContainer.innerHTML = whistlingWhilliesMines()
 }
 
 renderHTML()
