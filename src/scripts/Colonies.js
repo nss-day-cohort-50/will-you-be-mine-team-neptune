@@ -19,7 +19,7 @@ export const Colonies = () => {
   let coloniesHTML = "<ul>";
 
   for (const colony of colonies) {
-    coloniesHTML += `<li id="colonies--${colonies.id}">${colonies.name}</li>`;
+    coloniesHTML += `<li id="colonies--${colony.id}">${colony.name}</li>`;
   }
   coloniesHTML += "</ul>";
 
