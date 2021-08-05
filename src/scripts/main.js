@@ -1,4 +1,4 @@
-import { WhistlingWillies } from "./WhistlingWhillies.js"
+import { WhistlingWillies } from "./WhistlingWillies.js"
 
 const mainContainer = document.querySelector("#container")
 
