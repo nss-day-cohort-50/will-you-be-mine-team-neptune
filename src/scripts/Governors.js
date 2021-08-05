@@ -5,7 +5,6 @@ export const Governors = () => {
     let html = `<select class="governors" id="governors">
                 <option value="">Choose</option>`
     
-    
     const govHTML = governors.map(gov => {
         return `
         <option value="${gov.id}">${gov.name}</option>
