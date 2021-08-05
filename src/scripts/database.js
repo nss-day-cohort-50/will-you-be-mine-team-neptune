@@ -48,7 +48,7 @@ const database = {
         {id: 11, mineralId: 3, facilityId: 5, mineralsAvailableTonnage: 300},
     ],
     purchasedMinerals: [
-
+        
     ],
     chosenMinerals: {}
 }
