@@ -68,6 +68,9 @@ export const getMiningFacilities = () => {
 export const getFacilityMinerals = () => {
     return database.facilityMinerals.map(facilityMineral => ({...facilityMineral}))
 }
+export const getChosenMinerals = () => {
+    return database.chosenMinerals
+}
 
 export const addPurchasedMinerals = () => {
     const newPurchase = {...database.chosenMinerals}
