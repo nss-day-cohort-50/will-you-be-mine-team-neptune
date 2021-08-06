@@ -50,8 +50,13 @@ const database = {
     purchasedMinerals: [
         
     ],
-    chosenMinerals: {}
+    chosenMinerals: {
+        chooseGoverner: 0,
+        selectFacility: 0,
+        //selectMinerals:??
+    }
 }
+
 
 export const getGovernors = () => {
     return database.governors.map(gov => ({...gov}))
@@ -82,5 +87,9 @@ export const addPurchasedMinerals = () => {
     database.purchasedMinerals.push(newPurchase)
     database.chosenMinerals = {}
     document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+export const setGovernor = (id) => {
+    database.chosenMinerals.chooseGovernor = id
+    document.dispatchEvent( new CustomEvent("stateChanged") )
 }
 
