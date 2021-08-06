@@ -4,8 +4,11 @@ transState = getChosenMinerals
 mainContainer.addEventListener("stateChanged",
     customEvent => {
         if (transState.governorId) {
-            
+            //display colony of governor
+        } else {
+            //display nothing
         }
+
     })
 
 export const Governors = () => {
