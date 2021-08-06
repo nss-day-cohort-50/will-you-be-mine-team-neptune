@@ -1,7 +1,19 @@
-import { getGovernors } from "./database.js";
+import { getGovernors, getColonies, getChosenMinerals } from "./database.js";
+
+transState = getChosenMinerals
+mainContainer.addEventListener("stateChanged",
+    customEvent => {
+        if (transState.governorId) {
+            //display colony of governor
+        } else {
+            //display nothing
+        }
+
+    })
 
 export const Governors = () => {
     const governors = getGovernors();
+
     let html = `<select class="governors" id="governors">
                 <option value="">Choose</option>`
     
