@@ -3,7 +3,7 @@ import { getGovernors, getColonies, getChosenMinerals } from "./database.js";
 transState = getChosenMinerals
 mainContainer.addEventListener("stateChanged",
     customEvent => {
-        if (transState.chosenGov) {
+        if (transState.governorId) {
             
         }
     })
