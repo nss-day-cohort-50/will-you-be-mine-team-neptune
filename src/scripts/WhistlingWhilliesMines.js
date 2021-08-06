@@ -33,7 +33,7 @@ export const WhistlingWhilliesMines = () => {
             </section>
             <section class="choices__colonies options">
                 <h2>Colonies</h2>
-                
+                ${colonyMinerals()}
             </section>
         </article>
         <article>

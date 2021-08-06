@@ -16,6 +16,18 @@ const database = {
         {id: 4, name: "Coniver"},
         {id: 5, name: "Canada"}
     ],
+    colonyMinerals: [
+        {id: 1, mineralId: 2, colonyId: 1, mineralsAvailableTonnage: 10},
+        {id: 2, mineralId: 4, colonyId: 1, mineralsAvailableTonnage: 10},
+        {id: 3, mineralId: 1, colonyId: 2, mineralsAvailableTonnage: 10},
+        {id: 4, mineralId: 7, colonyId: 2, mineralsAvailableTonnage: 10},
+        {id: 6, mineralId: 6, colonyId: 2, mineralsAvailableTonnage: 10},
+        {id: 7, mineralId: 10,colonyId: 3, mineralsAvailableTonnage: 30},
+        {id: 8, mineralId: 9, colonyId: 4, mineralsAvailableTonnage: 30},
+        {id: 9, mineralId: 5, colonyId: 5, mineralsAvailableTonnage: 3},
+        {id: 10, mineralId: 5,colonyId: 5, mineralsAvailableTonnage: 3},
+        {id: 11, mineralId: 3,colonyId: 5, mineralsAvailableTonnage: 30},
+    ],
     minerals: [
         {id: 1, type: "Asbestos"},
         {id: 2, type: "Copper"},
@@ -51,7 +63,7 @@ const database = {
         
     ],
     chosenMinerals: {
-        chooseGoverner: 0,
+        chooseGovernor: 0,
         selectFacility: 0,
         selectMinerals: new Map()
     }
@@ -75,6 +87,9 @@ export const getFacilityMinerals = () => {
 }
 export const getChosenMinerals = () => {
     return database.chosenMinerals
+}
+export const getColonyMinerals = () => {
+    return database.colonyMinerals
 }
 export const addPurchasedMinerals = () => {
     const newPurchase = {...database.chosenMinerals}

@@ -8,7 +8,7 @@ document.addEventListener(
         setGovernor(parseInt(changeEvent.target.value))
         console.log("state of data has changed")
         
-        colonyMinerals()
+        
      }
     }
 )
