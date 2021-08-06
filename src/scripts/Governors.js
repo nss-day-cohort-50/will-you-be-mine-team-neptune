@@ -1,6 +1,7 @@
-import { getGovernors, getColonies, getChosenMinerals } from "./database.js";
+import { getGovernors } from "./Database.js";
 
-transState = getChosenMinerals
+//transState = getChosenMinerals
+/*
 mainContainer.addEventListener("stateChanged",
     customEvent => {
         if (transState.governorId) {
@@ -10,6 +11,7 @@ mainContainer.addEventListener("stateChanged",
         }
 
     })
+*/
 
 export const Governors = () => {
     const governors = getGovernors();
