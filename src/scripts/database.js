@@ -86,18 +86,18 @@ export const addPurchasedMinerals = () => {
   document.dispatchEvent(new CustomEvent("stateChanged"));
 };
 export const setMinerals = (id) => {
-  database.chosenMinerals.MineralsId = id;
+  database.chosenMinerals.mineralsId = id;
 };
 export const setMiningFacilities = (id) => {
-  database.chosenMinerals.MiningFacilitiesId = id;
+  database.chosenMinerals.miningfacilitiesId = id;
 };
 export const setColonies = (id) => {
-  database.chosenMinerals.ColoniesId = id;
+  database.chosenMinerals.coloniesId = id;
 };
 
 export const setGovernors = (id) => {
-  database.chosenMinerals.GovernorsId = id;
+  database.chosenMinerals.governorsId = id;
 };
 export const setFacilityMinerals = (id) => {
-  database.chosenMinerals.FacilityMineralsId = id;
+  database.chosenMinerals.facilitymineralsId = id;
 };
