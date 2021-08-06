@@ -53,7 +53,7 @@ const database = {
     chosenMinerals: {
         chooseGoverner: 0,
         selectFacility: 0,
-        //selectMinerals:??
+        selectMinerals: new Map()
     }
 }
 
@@ -73,7 +73,9 @@ export const getMiningFacilities = () => {
 export const getFacilityMinerals = () => {
     return database.facilityMinerals.map(facilityMineral => ({...facilityMineral}))
 }
-
+export const getChosenMinerals = () => {
+    return database.chosenMinerals
+}
 export const addPurchasedMinerals = () => {
     const newPurchase = {...database.chosenMinerals}
     let lastIndex = null
@@ -92,4 +94,7 @@ export const setGovernor = (id) => {
     database.chosenMinerals.chooseGovernor = id
     document.dispatchEvent( new CustomEvent("stateChanged") )
 }
-
+export const setFacility = (id) => {
+    database.chosenMinerals.selectFacility = facilityId
+    document.dispatchEvent( new CustomEvent("stateChanged") )
+}

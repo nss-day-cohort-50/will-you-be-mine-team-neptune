@@ -1,4 +1,5 @@
 import { getGovernors, setGovernor } from "./Database.js";
+import { colonyMinerals } from "./ColonyMineralInv.js"
 
 document.addEventListener(
     "change",
@@ -6,10 +7,11 @@ document.addEventListener(
         if (changeEvent.target.id === "governors"){
         setGovernor(parseInt(changeEvent.target.value))
         console.log("state of data has changed")
+        
+        colonyMinerals()
      }
     }
 )
-
 
 export const Governors = () => {
     const governors = getGovernors();
@@ -30,3 +32,4 @@ export const Governors = () => {
     return html   
 }
 
+//build find function

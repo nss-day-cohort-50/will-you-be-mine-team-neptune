@@ -1,4 +1,4 @@
-import { getMiningFacilities } from "./database.js";
+import { getMiningFacilities } from "./Database.js";
 
 
 document.addEventListener(
@@ -10,8 +10,7 @@ document.addEventListener(
             }        
         }
     )
-Display
-
+    
 export const MiningFacilities = () => {
     const facilities = getMiningFacilities()
     let html = "<ul class = 'facilities ul'>"
