@@ -15,6 +15,5 @@ export const Governors = () => {
     html += govHTML.join("")
     html += "</select>"
 
-    return html
-    
+    return html   
 }
