@@ -1,21 +1,25 @@
 import { getMiningFacilities } from "./database.js";
 
+
 document.addEventListener(
-    "change",
-    (event) => {
-        
+        "click",
+        (event) => {
+            if (event.target.id === "facility") {
+    
+                addCustomOrder()
+            }        
         }
-    }
-)
+    )
+Display
 
 export const MiningFacilities = () => {
     const facilities = getMiningFacilities()
-    let html = "<ul class = 'style ul'>"
+    let html = "<ul class = 'facilities ul'>"
 
      const listItemsArray = facilities.map(
         (facility) => {
             return `<li class = "facility">
-                <input type="radio" name="facility" value="${facilities.id}" /> ${facilities.name}
+                <input type="button" name="facility" value="${facility.name}" onclick="somefuntion()"/> 
             </li>`
         }
     )
