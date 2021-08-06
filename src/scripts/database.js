@@ -89,7 +89,7 @@ export const setMinerals = (id) => {
   database.chosenMinerals.mineralsId = id;
 };
 export const setMiningFacilities = (id) => {
-  database.chosenMinerals.miningfacilitiesId = id;
+  database.chosenMinerals.miningFacilitiesId = id;
 };
 export const setColonies = (id) => {
   database.chosenMinerals.coloniesId = id;
@@ -99,5 +99,5 @@ export const setGovernors = (id) => {
   database.chosenMinerals.governorsId = id;
 };
 export const setFacilityMinerals = (id) => {
-  database.chosenMinerals.facilitymineralsId = id;
+  database.chosenMinerals.facilityMineralsId = id;
 };
