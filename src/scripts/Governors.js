@@ -1,15 +1,15 @@
-import { getGovernors, getColonies, getChosenMinerals } from "./database.js";
+import { getGovernors, setGovernor } from "./Database.js";
 
-transState = getChosenMinerals
-mainContainer.addEventListener("stateChanged",
-    customEvent => {
-        if (transState.governorId) {
-            //display colony of governor
-        } else {
-            //display nothing
-        }
+document.addEventListener(
+    "change",
+    (changeEvent) => {
+        if (changeEvent.target.id === "governors"){
+        setGovernor(parseInt(changeEvent.target.value))
+        console.log("state of data has changed")
+     }
+    }
+)
 
-    })
 
 export const Governors = () => {
     const governors = getGovernors();
@@ -29,3 +29,4 @@ export const Governors = () => {
 
     return html   
 }
+

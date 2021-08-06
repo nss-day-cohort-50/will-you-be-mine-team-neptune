@@ -1,3 +1,5 @@
+import { Governors } from "./Governors.js"
+
 document.addEventListener(
     "click",
     (event) => {
@@ -16,7 +18,7 @@ export const WhistlingWhilliesMines = () => {
         <article class="choices">
             <section class="choices__minerals options">
                 <h2>Minerals</h2>
-                ${Minerals()}
+               
             </section>
             <section class="choices__governors options">
                 <h2>Governors</h2>
@@ -24,11 +26,11 @@ export const WhistlingWhilliesMines = () => {
             </section>
             <section class="choices__facilities options">
                 <h2>Facilities</h2>
-                ${Facilities()}
+               
             </section>
             <section class="choices__colonies options">
                 <h2>Colonies</h2>
-                ${Colonies()}
+              
             </section>
         </article>
         <article>
@@ -36,7 +38,7 @@ export const WhistlingWhilliesMines = () => {
         </article>
         <article class="purchaseMinerals">
             <h2>Purchase all Minerals</h2>
-            ${PurchaseMinerals()}
+           
         </article>
     `
 }
