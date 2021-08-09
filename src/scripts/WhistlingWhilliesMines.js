@@ -1,6 +1,6 @@
 import { Governors } from "./Governors.js"
 import {MiningFacilities} from "./MiningFacilities.js"
-import {colonyMinerals} from "./ColonyMineralInv.js"
+import {ColonyMinerals} from "./ColonyMineralInv.js"
 
 document.addEventListener(
     "click",
@@ -33,7 +33,7 @@ export const WhistlingWhilliesMines = () => {
             </section>
             <section class="choices__colonies options">
                 <h2>Colonies</h2>
-                ${colonyMinerals()}
+                ${ColonyMinerals()}
             </section>
         </article>
         <article>
