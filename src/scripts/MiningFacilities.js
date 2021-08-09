@@ -25,7 +25,7 @@ export const MiningFacilities = () => {
         </button>
 
         ${
-            storage.selectFacility === facility.id ? ColonyMinerals(facility.id) : ""
+            storage.selectFacility === facility.id ? FacilityMinerals() : ""
      }
      </ul>
          `).join("")
