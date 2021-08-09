@@ -19,7 +19,7 @@ export const MiningFacilities = () => {
     return facilities.map(facility => `
 
     <ul class = 'facility ul'>
-        <button ${storage.chooseGovernor > 0 ? "Facility" : "Select Governor"}
+        <button ${storage.chooseGovernor > 0 ? "" : "disabled"}
             class = "pickFacility"
             id = "facility--${facility.id}"> ${facility.name}
         </button>
@@ -32,8 +32,7 @@ export const MiningFacilities = () => {
 }
 
   
-     
-     
+// line 22 <button ${storage.chooseGovernor > 0 ? "Facility" : "Select Governor"}
      
      
     
