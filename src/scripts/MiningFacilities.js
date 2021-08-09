@@ -21,7 +21,7 @@ export const MiningFacilities = () => {
     <ul class = 'facility ul'>
         <button ${storage.chooseGovernor > 0 ? "Facility" : "Select Governor"}
             class = "pickFacility"
-            id = "facility--${facility.id}"
+            id = "facility--${facility.id}"> ${facility.name}
         </button>
 
         ${
