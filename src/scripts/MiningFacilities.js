@@ -1,19 +1,31 @@
-import { getMiningFacilities } from "./Database.js";
+import { getMiningFacilities, getChosenMinerals, setFacility } from "./Database.js";
+import {colonyMinerals} from "./ColonyMineralInv.js";
 
+const facilities = getMiningFacilities()
 
 document.addEventListener(
         "click",
         (event) => {
-            if (event.target.id === "facility") {
-    
-                addCustomOrder()
+            if (event.target.id.startsWith("facility--")) {
+                const [, facilityId] = event.target.id.split("--")
+                setFacility(parseInt(facilityId))
             }        
         }
     )
     
 export const MiningFacilities = () => {
-    const facilities = getMiningFacilities()
-    let html = "<ul class = 'facilities ul'>"
+    const storage = getChosenMinerals()
+
+    return facilities.map(facility => `
+
+    <ul class = 'facility ul'>
+        <button ${storage.chooseGovernor > 0 ? "Facilitys" : "Select Governor"}
+            class = "pickFacility"
+            id = "facility--${facility.id}"
+        </button>
+
+        ${storage.selectFacility === facility.id ? colonyMinerals ? colonyMinerals(facility.id) : ""
+     }
 
      const listItemsArray = facilities.map(
         (facility) => {
