@@ -27,9 +27,15 @@ export const Governors = () => {
     }
     
     const govHTML = governors.map(gov => {
-        return `
-        <option value="${gov.id}">${gov.name}</option>
-        `
+        if (gov.isActiveGov) {
+            return `
+            <option value="${gov.id}">${gov.name}</option>
+            `
+        } else {
+            return `
+            <option value =${gov.id} disabled>${gov.name}</option>
+            `
+        }
                        
     } )
 
