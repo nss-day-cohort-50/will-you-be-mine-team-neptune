@@ -113,3 +113,15 @@ export const setFacility = (id) => {
     database.chosenMinerals.selectFacility = id
     document.dispatchEvent( new CustomEvent("stateChanged") )
 }
+//Gus-code:
+// export const setSelectMinerals = (id) => {
+//     database.chosenMinerals.selectMinerals = id
+//     console.log(database.chosenMinerals)
+//     document.dispatchEvent( new CustomEvent("stateChanged") )
+// }
+
+export const setSelectMinerals = (facilityMinerals) => {
+    database.chosenMinerals.selectMinerals.set(facilityMinerals.facilityId, facilityMinerals.id)
+    document.dispatchEvent( new CustomEvent("stateChanged") )
+    console.log(database.chosenMinerals.selectMinerals)
+}
