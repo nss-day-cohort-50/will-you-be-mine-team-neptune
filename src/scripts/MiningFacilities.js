@@ -24,17 +24,16 @@ export const MiningFacilities = () => {
             id = "facility--${facility.id}"
         </button>
 
-        ${storage.selectFacility === facility.id ? colonyMinerals ? colonyMinerals(facility.id) : ""
+        ${
+            storage.selectFacility === facility.id ? colonyMinerals(facility.id) : ""
      }
-
-     const listItemsArray = facilities.map(
-        (facility) => {
-            return `<li class = "facility">
-                <input type="button" name="facility" value="${facility.name}" onclick="somefuntion()"/> 
-            </li>`
-        }
-    )
-    html += listItemsArray.join("")
-    html += "</ul>"
-    return html
+     </ul>
+         `).join("")
 }
+
+  
+     
+     
+     
+     
+    
