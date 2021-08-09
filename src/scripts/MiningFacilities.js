@@ -1,5 +1,5 @@
 import { getMiningFacilities, getChosenMinerals, setFacility } from "./Database.js";
-import {colonyMinerals} from "./ColonyMineralInv.js";
+import {FacilityMinerals} from "./FacilityMinerals.js";
 
 const facilities = getMiningFacilities()
 
@@ -19,13 +19,13 @@ export const MiningFacilities = () => {
     return facilities.map(facility => `
 
     <ul class = 'facility ul'>
-        <button ${storage.chooseGovernor > 0 ? "Facilitys" : "Select Governor"}
+        <button ${storage.chooseGovernor > 0 ? "Facility" : "Select Governor"}
             class = "pickFacility"
             id = "facility--${facility.id}"
         </button>
 
         ${
-            storage.selectFacility === facility.id ? colonyMinerals(facility.id) : ""
+            storage.selectFacility === facility.id ? ColonyMinerals(facility.id) : ""
      }
      </ul>
          `).join("")

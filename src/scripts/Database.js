@@ -110,6 +110,6 @@ export const setGovernor = (id) => {
     document.dispatchEvent( new CustomEvent("stateChanged") )
 }
 export const setFacility = (id) => {
-    database.chosenMinerals.selectFacility = facilityId
+    database.chosenMinerals.selectFacility = id
     document.dispatchEvent( new CustomEvent("stateChanged") )
 }
