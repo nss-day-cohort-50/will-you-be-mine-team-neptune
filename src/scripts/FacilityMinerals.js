@@ -1,11 +1,11 @@
-import { getChosenMinerals, getFacilityMinerals, getMinerals, getMiningFacilities} from "./Database.js";
+import { getChosenMinerals, getFacilityMinerals, getMinerals, getMiningFacilities, setSelectMinerals} from "./Database.js";
 
 
 document.addEventListener(
         "click",
         (event) => {
             if (event.target.name === "facilityMineral") {
-                //setMinerals(parseInt(event.target.value))
+                setSelectMinerals(parseInt(event.target.value))
                 //console.log(event.target.value)
             }        
         }
