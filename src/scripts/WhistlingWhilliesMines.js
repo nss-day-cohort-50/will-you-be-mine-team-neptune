@@ -18,23 +18,28 @@ export const WhistlingWhilliesMines = () => {
         <h1>${companyName}s! Where you get the gold, and we get the shaft.</h1>
             
         <article class="choices">
-            <section class="choices__minerals options">
+            <div class="mineralsAndFacilities">
+                <section class="choices__minerals options">
                 <h2>Minerals</h2>
                
-            </section>
-            <section class="choices__governors options">
-                <h2>Governors</h2>
-                ${Governors()}
-            </section>
-            <section class="choices__facilities options">
+                </section>
+                <section class="choices__facilities options">
                 <h2>Facilities</h2>
                 ${MiningFacilities()}
-               
-            </section>
-            <section class="choices__colonies options">
+                </section>
+            </div>
+
+            <div class="governorsAndColonies">
+               <section class="choices__governors options">
+                <h2>Governors</h2>
+                ${Governors()}
+                </section>
+          
+                <section class="choices__colonies options">
                 <h2>Colonies</h2>
                 ${ColonyMinerals()}
-            </section>
+                </section>
+            </div>
         </article>
         <article>
             <button id="orderButton">Purchase all Minerals</button>
