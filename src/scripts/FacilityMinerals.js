@@ -2,7 +2,7 @@ import { getChosenMinerals, getFacilityMinerals, getMinerals, getMiningFacilitie
 
 
 document.addEventListener(
-        "click",
+        "change",
         (event) => {
             if (event.target.name === "facilityMineral") {
                 setSelectMinerals(parseInt(event.target.value))

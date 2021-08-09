@@ -122,5 +122,6 @@ export const setFacility = (id) => {
 
 export const setSelectMinerals = (facilityMinerals) => {
     database.chosenMinerals.selectMinerals.set(facilityMinerals.facilityId, facilityMinerals.id)
-    console.log(database.chosenMinerals)
+    document.dispatchEvent( new CustomEvent("stateChanged") )
+    console.log(database.chosenMinerals.selectMinerals)
 }
