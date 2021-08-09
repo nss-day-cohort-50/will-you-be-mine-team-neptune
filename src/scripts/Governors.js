@@ -1,5 +1,6 @@
-import { getGovernors, setGovernor } from "./Database.js";
-import { colonyMinerals } from "./ColonyMineralInv.js"
+import { getGovernors, setGovernor, getChosenMinerals, getColonyMinerals } from "./Database.js";
+import { ColonyMinerals } from "./ColonyMineralInv.js"
+
 
 document.addEventListener(
     "change",
@@ -7,17 +8,23 @@ document.addEventListener(
         if (changeEvent.target.id === "governors"){
         setGovernor(parseInt(changeEvent.target.value))
         console.log("state of data has changed")
-        
-        
      }
     }
 )
 
 export const Governors = () => {
+    const chosenMinerals = getChosenMinerals()
     const governors = getGovernors();
+    let html = ''
+    if (chosenMinerals.chooseGovernor !== 0) {
+        const foundGovernor = governors.find(governor => governor.id === chosenMinerals.chooseGovernor)
+        html = `<select class="governors" id="governors">
+                <option value="">${foundGovernor.name}</option>`
+    } else {
 
-    let html = `<select class="governors" id="governors">
-                <option value="">Choose</option>`
+        html = `<select class="governors" id="governors">
+        <option value="">Choose</option>`
+    }
     
     const govHTML = governors.map(gov => {
         return `
@@ -31,5 +38,3 @@ export const Governors = () => {
 
     return html   
 }
-
-//build find function

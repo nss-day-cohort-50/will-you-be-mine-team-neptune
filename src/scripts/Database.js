@@ -89,7 +89,7 @@ export const getChosenMinerals = () => {
     return database.chosenMinerals
 }
 export const getColonyMinerals = () => {
-    return database.colonyMinerals
+    return database.colonyMinerals.map(colonyMineral => ({...colonyMineral}))
 }
 export const addPurchasedMinerals = () => {
     const newPurchase = {...database.chosenMinerals}
