@@ -11,9 +11,9 @@ export const ChosenOptions = () => {
     html += `<ul>`
     if (chosenMinerals.selectMinerals.size !== 0) {
         for (const [facilityId, mineralId] of chosenMinerals.selectMinerals.entries()) {
-            const facilityMineral = facilityMinerals.find(facilityMineral => facilityMineral.id === mineralId)
-            const facility = facilities.find(facility => facility.id === facilityMineral.facilityId)
-            const mineral = minerals.find(mineral => mineral.id === facilityMineral.mineralId)
+            const facilityMineral = facilityMinerals.find(facilityMin => facilityMin.id === mineralId)
+            const mineral = minerals.find(min => min.id === facilityMineral.mineralId)
+            const facility = facilities.find(fac => fac.id === facilityMineral.facilityId)
             html += `<li>You have chosen 1 ton of ${mineral.type} from ${facility.name} </li>`
         }
         html += `</ul>`
