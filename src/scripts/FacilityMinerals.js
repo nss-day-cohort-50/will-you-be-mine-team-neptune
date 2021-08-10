@@ -16,10 +16,8 @@ document.addEventListener(
     (event) => {
         if (event.target.name === "facilityMineral") {
             const facilityMinerals = getFacilityMinerals()
-            // const selectedFacilityMineralId = event.target.value
-            const findMineral = facilityMinerals.find(facilityMineral => facilityMineral.id === event.target.value)
-            setSelectMinerals(parseInt(findMineral))
-            console.log(event.target.value)
+            const findMineral = facilityMinerals.find(facilityMineral => facilityMineral.mineralId === parseInt(event.target.value))
+            setSelectMinerals(findMineral)
         }        
     }
 )
