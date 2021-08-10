@@ -56,7 +56,7 @@ const database = {
         {id: 7, mineralId: 10, facilityId: 3, mineralsAvailableTonnage: 300},
         {id: 8, mineralId: 9, facilityId: 4, mineralsAvailableTonnage: 300},
         {id: 9, mineralId: 5, facilityId: 5, mineralsAvailableTonnage: 300},
-        {id: 10, mineralId: 5, facilityId: 5, mineralsAvailableTonnage: 300},
+        {id: 10, mineralId: 8, facilityId: 5, mineralsAvailableTonnage: 300},
         {id: 11, mineralId: 3, facilityId: 5, mineralsAvailableTonnage: 300},
     ],
     purchasedMinerals: [
