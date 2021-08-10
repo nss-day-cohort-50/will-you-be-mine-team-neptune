@@ -1,17 +1,26 @@
-import { getChosenMinerals, getFacilityMinerals, getMinerals, getMiningFacilities} from "./Database.js";
+import { getChosenMinerals, getFacilityMinerals, getMinerals, getMiningFacilities, setSelectMinerals} from "./Database.js";
 
+//gus-code:
+// document.addEventListener(
+//         "click",
+//         (event) => {
+//             if (event.target.name === "facilityMineral") {
+//                 setSelectMinerals(parseInt(event.target.value))
+//                 console.log(event.target.value)
+//             }        
+//         }
+//     )
 
 document.addEventListener(
-        "click",
-        (event) => {
-            if (event.target.name === "facilityMineral") {
-                //setMinerals(parseInt(event.target.value))
-                //console.log(event.target.value)
-            }        
-        }
-    )
-//Display
-//const facilityMinerals = getFacilityMinerals()
+    "change",
+    (event) => {
+        if (event.target.name === "facilityMineral") {
+            const facilityMinerals = getFacilityMinerals()
+            const findMineral = facilityMinerals.find(facilityMineral => facilityMineral.mineralId === parseInt(event.target.value))
+            setSelectMinerals(findMineral)
+        }        
+    }
+)
 
 export const FacilityMinerals = () => {
     const facilities = getMiningFacilities()

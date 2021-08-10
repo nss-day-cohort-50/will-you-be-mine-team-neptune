@@ -4,16 +4,16 @@ const database = {
         {id: 2, colonyId: 2, name: "Eric Cartman", isActiveGov: false},
         {id: 3, colonyId: 2, name: "Mrs. Cartman", isActiveGov: true},
         {id: 4, colonyId: 3, name: "Towlie McTowel", isActiveGov: true},
-        {id: 5, colonyId: 4, name: "Mr. Slave", isActiveGov: true},
+        {id: 5, colonyId: 4, name: "Mr. Slave", isActiveGov: false},
         {id: 6, colonyId: 1, name: "Randy Marsh", isActiveGov: true},
         {id: 7, colonyId: 5, name: "M. Garrison", isActiveGov: true},
-        {id: 8, colonyId: 2, name: "Butters Stotch", isActiveGov: true}
+        {id: 8, colonyId: 2, name: "Butters Stotch", isActiveGov: false}
     ],
     colonies: [
         {id: 1, name: "SoDeSoPa"},
-        {id: 2, name: "ShiPaTown"},
+        {id: 2, name: "ShiTpaTown"},
         {id: 3, name: "South Park"},
-        {id: 4, name: "Coniver"},
+        {id: 4, name: "Conifer"},
         {id: 5, name: "Canada"}
     ],
     colonyMinerals: [
@@ -45,7 +45,7 @@ const database = {
         {id: 2, name: "Kenny's House", isActiveFacility: true},
         {id: 3, name: "South Park Elementary", isActiveFacility: true},
         {id: 4, name: "Whole Foods", isActiveFacility: false},
-        {id: 5, name: "Tegrity Farm", isActiveFacility: true},   
+        {id: 5, name: "Tegridy Farms", isActiveFacility: true},   
     ],
     facilityMinerals: [
         {id: 1, mineralId: 2, facilityId: 1, mineralsAvailableTonnage: 200},
@@ -56,7 +56,7 @@ const database = {
         {id: 7, mineralId: 10, facilityId: 3, mineralsAvailableTonnage: 300},
         {id: 8, mineralId: 9, facilityId: 4, mineralsAvailableTonnage: 300},
         {id: 9, mineralId: 5, facilityId: 5, mineralsAvailableTonnage: 300},
-        {id: 10, mineralId: 5, facilityId: 5, mineralsAvailableTonnage: 300},
+        {id: 10, mineralId: 8, facilityId: 5, mineralsAvailableTonnage: 300},
         {id: 11, mineralId: 3, facilityId: 5, mineralsAvailableTonnage: 300},
     ],
     purchasedMinerals: [
@@ -112,4 +112,16 @@ export const setGovernor = (id) => {
 export const setFacility = (id) => {
     database.chosenMinerals.selectFacility = id
     document.dispatchEvent( new CustomEvent("stateChanged") )
+}
+//Gus-code:
+// export const setSelectMinerals = (id) => {
+//     database.chosenMinerals.selectMinerals = id
+//     console.log(database.chosenMinerals)
+//     document.dispatchEvent( new CustomEvent("stateChanged") )
+// }
+
+export const setSelectMinerals = (facilityMinerals) => {
+    database.chosenMinerals.selectMinerals.set(facilityMinerals.facilityId, facilityMinerals.id)
+    document.dispatchEvent( new CustomEvent("stateChanged") )
+    console.log(database.chosenMinerals.selectMinerals)
 }
